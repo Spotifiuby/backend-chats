@@ -7,6 +7,7 @@
 * [Run the docker container locally](#run-the-docker-container-locally)
 * [Deploy](#deploy)
 * [Docs](#docs)
+* [Docker and Heroku](#docker-and-heroku)
 
 # Setup
 First, create a new python environment.
@@ -93,3 +94,51 @@ heroku ps:exec --dyno=web.2
 # Docs
 To read the interactive docs go to:\
 http://127.0.0.1:8000/docs
+
+
+# Docker and Heroku
+**Note:** Replace `your-app-name` in the instructions with the name you wish to have on your app.
+
+1. Install git (or just downlad the repo)
+
+2. Install [Heroku cli](https://devcenter.heroku.com/articles/heroku-cli) and [log in](https://devcenter.heroku.com/articles/heroku-cli#getting-started)
+
+3. Clone or download this repo.
+
+```bash
+git clone git@github.com:Spotifiuby/backend-chats.git
+```
+
+4. cd into the directory
+
+```bash
+cd backend-chats
+```
+
+5. Create the heroku app
+
+```bash
+heroku create your-app-name
+```
+
+6. Set the heroku cli git remote to that app
+
+```bash
+heroku git:remote your-app-name
+```
+
+7. Set the heroku stack setting to container
+
+```bash
+heroku stack:set container
+```
+
+8. Push to heroku
+
+```bash
+git push heroku main
+```
+
+9.  Enjoy your fastAPI app at [https://your-app-name.herokuapp.com](https://your-app-name.herokuapp.com)
+
+*Ref:* https://github.com/askblaker/fastapi-docker-heroku
