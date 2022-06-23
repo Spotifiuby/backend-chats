@@ -1,0 +1,29 @@
+name: Spotifiuby CI
+on:
+  pull_request:
+    types:
+      - '*'
+  push:
+    branches:
+      - '*'
+jobs:
+  run:
+    name: Testing and Linting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.9
+      - name: Generate coverage report
+        run: |
+          pip install -r requirements.txt
+          coverage run -m pytest
+          coverage xml -o ./coverage/coverage.xml
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          directory: ./coverage/
+          flags: integration
