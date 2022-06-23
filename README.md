@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/Spotifiuby/backend-songs/branch/main/graph/badge.svg?token=HQVLP3H2XY)](https://codecov.io/gh/Spotifiuby/backend-songs) ![codecov](https://github.com/Spotifiuby/backend-songs/workflows/Spotifiuby%20CI/badge.svg)
+[![codecov](https://codecov.io/gh/Spotifiuby/backend-chats/branch/main/graph/badge.svg?token=AeF0yP6UgT)](https://codecov.io/gh/Spotifiuby/backend-chats) ![codecov](https://github.com/Spotifiuby/backend-chats/workflows/Spotifiuby%20CI/badge.svg)
 
 # Table of Contents
 * [Setup](#setup)
