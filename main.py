@@ -7,6 +7,7 @@ from logging.config import dictConfig
 from config.log_conf import log_config
 
 from routes.chat import chat_routes
+from routes.token import token_routes
 
 
 dictConfig(log_config)
@@ -32,6 +33,7 @@ app.add_middleware(
 
 
 app.include_router(chat_routes)
+app.include_router(token_routes)
 
 
 @app.get("/", include_in_schema=False)
